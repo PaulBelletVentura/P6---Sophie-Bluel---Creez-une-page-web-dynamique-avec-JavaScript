@@ -636,6 +636,12 @@ form.addEventListener('submit', (event) => {
     return false;
 
   }
+  
+  // Vérification du type de fichier
+   if (!selectedFile.type.startsWith('image/')) {
+    alert('Veuillez sélectionner un fichier image');
+    return false;
+  }
 
   // Création de l'objet FormData pour envoyer les données
   const formData = new FormData();
